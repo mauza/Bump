@@ -4,6 +4,76 @@ body {
   padding-bottom: 20px;
 }
 
+/* getting all my style in with this little diddy*/
+.circlecolor {
+        color: rgba(20,20,20,0.7);
+    }
+    .housecolor {
+        color: #fff;
+    }
+    .sosickofthis {
+        color: rgba(50,50,50,.8);
+    }
+    .shade{
+        background: rgba(50,50,50,0.8);
+    }
+    .light {
+        background: rgba(280,280,280,0.2);
+    }
+    .maxpad {
+        padding: 18px 24px;
+    }
+
+
+/*All the backgrounds and such */
+.fata {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../static/img/259H.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.fatb {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../static/img/263H.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.fatc {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../static/img/40H.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.fatd {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../static/img/270H.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -15,7 +85,7 @@ body {
 /* Custom page header */
 .header {
   padding-bottom: 20px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid transparent;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -28,7 +98,7 @@ body {
 .footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5;
+  border-top: transparent;
 }
 
 /* Customize container */
@@ -43,10 +113,17 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  top: 500px;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: transparent;
 }
-.jumbotron .btn {
+.jumbotron {
+  padding: 180px 24px;
+  font-size: 21px;
+  background: transparent;
+}
+
+.btn {
   padding: 14px 24px;
   font-size: 21px;
 }

@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, json, session, redirect
 from flask.ext.mysql import MySQL
 from werkzeug import generate_password_hash, check_password_hash
+import os
 
 app = Flask(__name__)
 app.debug = True
+
 mysql = MySQL()
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'mauza'
@@ -108,6 +110,11 @@ def validateLogin():
     finally:
         cursor.close()
         con.close()
+
+
+
+#for Cloud 9
+app.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)))
 
 if __name__== "__main__":
     app.run()
