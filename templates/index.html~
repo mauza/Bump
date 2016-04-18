@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bump Real Estate App</title>
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel=
+    "stylesheet">
+    <link href="../static/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/font-awesome/css/font-awesome.min.css" rel=
+    "stylesheet" type="text/css">
+    <style>
+    .you {color: #009999;}
+    .us {color: #fff;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li class="active" role="presentation">
+                        <a href="#">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="showSignIn">Sign In</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="showSignUp">Sign Up</a>
+                    </li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Bump</h3>
+        </div>
+        <div class="jumbotron">
+            <h1>Real Estate App</h1>
+            <div>
+                <div class="service-item">
+                        <span class="fa-stack fa-5x"><i class=
+                        "fa fa-circle fa-stack-2x you"></i> <i class=
+                        "fa fa-home fa-stack-1x text-primary us"></i></span>
+                    </div>
+                </div>
+
+        </div>
+
+        <div class="row marketing">
+            <div class="col-lg-6">
+                <h4>What is Bump?</h4>
+                <p>Bump performs realtime cost analysis on commercial rental
+                properties.</p>
+                <h4>How can it help you?</h4>
+                <p>Bump will allow you to know instantly if a property's rents
+                can cover the morgage.</p>
+                <h4>What does this mean?</h4>
+                <p>You will be the first to submit an offer that makes economic
+                and strategic sense.</p>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>&copy; Mauza 2016</p>
+        </footer>
+    </div>
+</body>
+</html>
