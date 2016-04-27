@@ -2957,16 +2957,16 @@ output {
 }
 
 .form-control::-moz-placeholder {
-    color: rgba(280,280,280,.6);
+    color: rgba(255,255,255,.6);
     opacity: 1;
 }
 
 .form-control:-ms-input-placeholder {
-    color: rgba(280,280,280,.6);
+    color: rgba(255,255,255,.6);
 }
 
 .form-control::-webkit-input-placeholder {
-    color: rgba(280,280,280,.6);
+    color: rgba(255,255,255,.6);
 }
 
 .form-control::-ms-expand {

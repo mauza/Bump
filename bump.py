@@ -30,7 +30,7 @@ def showSignUp():
 
 @app.route('/userHome')
 def userHome():
-    if session.get('user'):
+    if session.get('user') == 1:
         return render_template('userHome.html')
     else:
         return redirect('/showSignIn')

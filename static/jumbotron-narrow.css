@@ -5,24 +5,34 @@ body {
 }
 
 /* getting all my style in with this little diddy*/
+.houseshade {
+  color: rgba(255, 255, 255,0.9);
+  background: rgba(50,50,50,0.8);
+}
 .circlecolor {
-        color: rgba(20,20,20,0.7);
-    }
-    .housecolor {
-        color: #fff;
-    }
-    .sosickofthis {
-        color: rgba(50,50,50,.8);
-    }
-    .shade{
-        background: rgba(50,50,50,0.8);
-    }
-    .light {
-        background: rgba(280,280,280,0.2);
-    }
-    .maxpad {
-        padding: 18px 24px;
-    }
+  color: rgba(20,20,20,0.7);
+}
+.housecolor {
+  color: rgba(255,255,255,0.9);
+}
+.sosickofthis {
+  color: rgba(50,50,50,.8);
+}
+.shade{
+  background: rgba(50,50,50,0.8);
+}
+.light {
+  background: rgba(280,280,280,0.2);
+}
+.maxpad {
+  padding: 18px 24px;
+}
+.allthedumb {
+  padding: 50px;
+  color: rgba(255, 255, 255,0.9);
+  background: rgba(50,50,50,0.8);
+}
+
 
 
 /*All the backgrounds and such */
@@ -63,6 +73,18 @@ body {
 }
 
 .fatd {
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url(../static/img/226H.jpg) no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+.fate {
   display: table;
   position: relative;
   width: 100%;

@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
- <!--Casey is a Badass -->
+ <!--Casey is (not) a Badass -->
 <head>
-    <title>Bump Real Estate App</title>
+    <title>BunnyFat Real Estate App</title>
  
  
     <link href="../static/bootstrap.min.css" rel="stylesheet">
  
     <link href="../static/jumbotron-narrow.css" rel="stylesheet">
     <link href="../static/signup.css" rel="stylesheet">
- 
+    <script>
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    
+    function drag(ev) {
+        ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
 </head>
  
 <body>
@@ -18,31 +32,50 @@
         <div class="header">
             <nav>
                 <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><aacdmpt href="/logout">Logout</a>
+                    <li role="presentation" class="active"><a href="/logout">Logout</a>
                     </li>
                 </ul>
             </nav>
-            <h3 class="text-muted">Bump</h3>
+            <h3><span class="houseshade">BunnyFat</span></h3>
         </div>
- 
+     
         <div class="jumbotron">
-            <h1>Welcome Home !!</h1>
-            <form class="form-signin" action="/userHome" method="post">
-              <label for="inputName" class="sr-only">Number 1</label>
-              <input  id="num1" class="form-control" placeholder="Name" required autofocus>
-              <label  class="sr-only">Number 2</label>
-              <input id="num2" class="form-control" placeholder="Email address" required autofocus>
-              <label class="sr-only">Number 3</label>
-              <input  id="num3" class="form-control" placeholder="Password" required>
-         
-              <button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">Oh yeah!</button>
-            </form>
-            <div>{{party}}</div>
+            <div class="allthedumb">   
+               <h1><span>Info Dump...</shade></h1>
+                <form class="form-signin" action="/userHome" method="post">
+                    
+                    <p>Drag MLS PDF into the rectangle:</p>
+
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <img id="drag1" class="housecolor" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="300" height="69">
+                    <br>
+                    <p> or... fill out information below.</p>
+                    <label for="inputName" class="sr-only">Number 1</label>
+                    <input  id="num1" class="form-control" placeholder="Listing Price $" required autofocus>
+                    <label  class="sr-only">Number 2</label>
+                    <input id="num2" class="form-control" placeholder="Square Feet" required autofocus>
+                    <label class="sr-only">Number 3</label>
+                    <input  id="num3" class="form-control" placeholder="Total Units" required>
+                    <label class="sr-only">Number 4</label>
+                    <input  id="num4" class="form-control" placeholder="Monthly Rents" required>
+                    <br>
+                    
+                    <div>
+                        <p>Select Mortgage</p>
+                        <input type="radio" name="mortgage" value="mg10" > 10 yr
+                        <input type="radio" name="mortgage" value="mg15" checked > 15 yr
+                        <input type="radio" name="mortgage" value="mg30" > 30 yr
+                    </div>
+                    
+                    <br>
+                  <button id="submit" class="btn btn-lg btn-primary btn-block" type="submit">LETS DO THIS!</button>
+                </form>
+            </div>    
         </div>
  
  
         <footer class="footer">
-            <p>&copy; Mauza 2016</p>
+            <p><span class="houseshade">&copy; BunnyFat 2016</span></p>
         </footer>
  
     </div>
