@@ -1,10 +1,17 @@
-from flask import Flask, render_template, request, json, session, redirect
+from flask import Flask, render_template, request, json, session, redirect, url_for
 from flask.ext.mysql import MySQL
-from werkzeug import generate_password_hash, check_password_hash
+from werkzeug import generate_password_hash, check_password_hash, secure_filename
 import os
+import slate
+import re
+
+
+UPLOAD_FOLDER = 'static/uploads'
+ALLOWED_EXTENSIONS = set(['pdf'])
 
 app = Flask(__name__)
 app.debug = True
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 mysql = MySQL()
 # MySQL configurations
@@ -111,7 +118,21 @@ def validateLogin():
         cursor.close()
         con.close()
 
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.',1)[1] in ALLOWED_EXTENSIONS
 
+@app.route('/mlsCalc', methods=['GET', 'POST'])
+def mlsCalc():
+    if request.method == 'POST':
+        file = request.files['file']
+        if file and allowed_file(file.filename):
+            #the next two lines are for if we want to save the file to the server
+            #filename = secure_filename(file.filename)
+            #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            mls = unicode(slate.PDF(file)[0], 'utf-8')
+            return render_template('calc.html', mortgage=request.form['mortgage'], mls=mls)
+    return redirect('/userHome')
+    
 
 #for Cloud 9
 app.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)))

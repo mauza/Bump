@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <!--Casey is (not) a Badass -->
+ <!--Chase is an ass -->
 <head>
     <title>BunnyFat Real Estate App</title>
  
@@ -26,7 +27,7 @@
     </script>
 </head>
  
-<body>
+<body class="fatd">
  
     <div class="container">
         <div class="header">
@@ -42,14 +43,17 @@
         <div class="jumbotron">
             <div class="allthedumb">   
                <h1><span>Info Dump...</shade></h1>
-                <form class="form-signin" action="/userHome" method="post">
+                <form class="form-signin" enctype="multipart/form-data" action="/mlsCalc" method="post">
                     
-                    <p>Drag MLS PDF into the rectangle:</p>
+                    <p>Fit the thing in the thing and win a prize!</p>
 
-                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
                     <img id="drag1" class="housecolor" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="300" height="69">
+                    <input type="file" name="file">
+                    </div>
                     <br>
-                    <p> or... fill out information below.</p>
+                    
+                    <!-- <p> or... fill out information below.</p>
                     <label for="inputName" class="sr-only">Number 1</label>
                     <input  id="num1" class="form-control" placeholder="Listing Price $" required autofocus>
                     <label  class="sr-only">Number 2</label>
@@ -59,6 +63,7 @@
                     <label class="sr-only">Number 4</label>
                     <input  id="num4" class="form-control" placeholder="Monthly Rents" required>
                     <br>
+                    -->
                     
                     <div>
                         <p>Select Mortgage</p>
