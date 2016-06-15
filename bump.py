@@ -15,10 +15,10 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 mysql = MySQL()
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'mauza'
+app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'caster11'
 app.config['MYSQL_DATABASE_DB'] = 'bump'
-app.config['MYSQL_DATABASE_HOST'] = 'work.mauza.net'
+app.config['MYSQL_DATABASE_HOST'] = 'mauza.duckdns.org'
 mysql.init_app(app)
 
 app.secret_key = "this is a secrect, that is why you will never know it"

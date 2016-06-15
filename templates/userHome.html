@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
- <!--Casey is (not) a Badass -->
- <!--Chase is an ass -->
 <head>
     <title>BunnyFat Real Estate App</title>
  
@@ -24,10 +22,12 @@
         var data = ev.dataTransfer.getData("text");
         ev.target.appendChild(document.getElementById(data));
     }
+    
     </script>
 </head>
  
-<body class="fatd">
+<!--<body class="fatd">-->
+<body>
  
     <div class="container">
         <div class="header">
@@ -41,14 +41,14 @@
         </div>
      
         <div class="jumbotron">
-            <div class="allthedumb">   
+            <div class="allthedumb" width="150" height="150">   
                <h1><span>Info Dump...</shade></h1>
                 <form class="form-signin" enctype="multipart/form-data" action="/mlsCalc" method="post">
                     
                     <p>Fit the thing in the thing and win a prize!</p>
 
                     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <img id="drag1" class="housecolor" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="300" height="69">
+                    <img id="drag1" class="housecolor" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="150" height="150">
                     <input type="file" name="file">
                     </div>
                     <br>
