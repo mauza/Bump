@@ -24,27 +24,14 @@
 </head>
 <body>
     <div  class="allthedumb">
-        {{mortgage}}
+        {% for thing in info: %}
+            {{thing[0]}}{{thing[1]}}
+            <br>
+        {% endfor %}
         <br>
-        
-        <span>{{mls}}</span>
-        
-        <p> or... fill out information below.</p>
-        <label for="inputName" class="sr-only">Number 1</label>
-        <input  id="num1" class="form-control" placeholder="Listing Price $" required autofocus>
-        <label  class="sr-only">Number 2</label>
-        <input id="num2" class="form-control" placeholder="Square Feet" required autofocus>
-        <label class="sr-only">Number 3</label>
-        <input  id="num3" class="form-control" placeholder="Total Units" required>
-        <label class="sr-only">Number 4</label>
-        <input  id="num4" class="form-control" placeholder="Monthly Rents" required>
+        <p> more to come</p>
+
         <br>
-        <!--
-        {{List Price: $"389,699"}}
-        {{UT "84102"}}
-        {{Tot Sq Ft:"2,797"}}
-        {{Tot Units:"4"}}
-        -->
     </div>    
 
 </body>

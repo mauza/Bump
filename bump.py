@@ -2,8 +2,8 @@ from flask import Flask, render_template, request, json, session, redirect, url_
 from flask.ext.mysql import MySQL
 from werkzeug import generate_password_hash, check_password_hash, secure_filename
 import os
-import slate
 import re
+import fatBunny
 
 
 UPLOAD_FOLDER = 'static/uploads'
@@ -107,7 +107,6 @@ def validateLogin():
                 return redirect('/userHome')
             else:
                 return render_template('signin.html',error = 'Wrong Email address or Password.', errorDisplay = "", sDisplay = "display: none;")
-                #return json.dumps({'html':'<span>Wrong Email address or Password.</span>'})
         else:
             return render_template('signin.html',error = 'Wrong Email address or Password.', errorDisplay = "", sDisplay = "display: none;")
  
@@ -124,13 +123,11 @@ def allowed_file(filename):
 @app.route('/mlsCalc', methods=['GET', 'POST'])
 def mlsCalc():
     if request.method == 'POST':
-        file = request.files['file']
-        if file and allowed_file(file.filename):
-            #the next two lines are for if we want to save the file to the server
-            #filename = secure_filename(file.filename)
-            #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            mls = unicode(slate.PDF(file)[0], 'utf-8')
-            return render_template('calc.html', mortgage=request.form['mortgage'], mls=mls)
+        try:
+            infoArray = fatBunny.calc(request.form['mlsNumber'], request.form['mortgage'])
+            return render_template('calc.html', info=infoArray )
+        except RuntimeError as e:
+            return render_template('error.html', error = e)
     return redirect('/userHome')
     
 

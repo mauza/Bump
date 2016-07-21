@@ -42,34 +42,19 @@
      
         <div class="jumbotron">
             <div class="allthedumb" width="150" height="150">   
-               <h1><span>Info Dump...</shade></h1>
+               <h1><span>All I need is an MLS number...</shade></h1>
                 <form class="form-signin" enctype="multipart/form-data" action="/mlsCalc" method="post">
-                    
-                    <p>Fit the thing in the thing and win a prize!</p>
+                    <div>
+                    <p>Go ahead put a valid MLS number in there</p>
 
-                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <img id="drag1" class="housecolor" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="150" height="150">
-                    <input type="file" name="file">
+                    <input type="text" class="form-control" name="mlsNumber">
                     </div>
                     <br>
-                    
-                    <!-- <p> or... fill out information below.</p>
-                    <label for="inputName" class="sr-only">Number 1</label>
-                    <input  id="num1" class="form-control" placeholder="Listing Price $" required autofocus>
-                    <label  class="sr-only">Number 2</label>
-                    <input id="num2" class="form-control" placeholder="Square Feet" required autofocus>
-                    <label class="sr-only">Number 3</label>
-                    <input  id="num3" class="form-control" placeholder="Total Units" required>
-                    <label class="sr-only">Number 4</label>
-                    <input  id="num4" class="form-control" placeholder="Monthly Rents" required>
-                    <br>
-                    -->
-                    
                     <div>
                         <p>Select Mortgage</p>
-                        <input type="radio" name="mortgage" value="mg10" > 10 yr
-                        <input type="radio" name="mortgage" value="mg15" checked > 15 yr
-                        <input type="radio" name="mortgage" value="mg30" > 30 yr
+                        <input type="radio" name="mortgage" value="0" > 10 yr
+                        <input type="radio" name="mortgage" value="1" checked > 15 yr
+                        <input type="radio" name="mortgage" value="2" > 30 yr
                     </div>
                     
                     <br>
