@@ -25,13 +25,15 @@
 <body>
     <div  class="allthedumb">
         {% for thing in info: %}
-            {{thing[0]}}{{thing[1]}}
-            <br>
+            <p>{{thing[0]|safe}}{{thing[1]|safe}}</p>
         {% endfor %}
         <br>
-        <p> more to come</p>
+        <p><strong> more to come</strong></p>
 
         <br>
+	<form action ="/userHome">
+	    <input type="submit" value="Try another">
+	</form>
     </div>    
 
 </body>

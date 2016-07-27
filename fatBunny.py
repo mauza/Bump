@@ -10,11 +10,12 @@ def calc(mlsNum, mortgage):
     try:
         mls = json.loads(requests.get('http://v9services.utahrealestate.com/property-search/listing-details?prop_class=multi&listno='+mlsNum).text)
     except:
-        return ["I'm sorry, ", "I was unable to find that MLS number."]
-    if mls is None:
-        return ["I'm sorry, ", "I encountered an error"]
+        return [["Um....", " well, yeah... thats embarrasing"]]
+    if mls['data'] is None:
+        return [['Sorry', ' MLS not found']]
         
     #This is the zillow peice where we are mainly concerned with rent estimate
+    infoArray.append(['<img src="'+mls['data']['photos'][0]['medium'],'">'])
     address = mls['data']['address']
     city = mls['data']['city_name']
     state = mls['data']['state']

@@ -15,7 +15,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 mysql = MySQL()
 # MySQL configurations
-app.config['MYSQL_DATABASE_USER'] = 'root'
+app.config['MYSQL_DATABASE_USER'] = 'fatbunny'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'caster11'
 app.config['MYSQL_DATABASE_DB'] = 'bump'
 app.config['MYSQL_DATABASE_HOST'] = 'mauza.duckdns.org'
@@ -132,7 +132,7 @@ def mlsCalc():
     
 
 #for Cloud 9
-app.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)))
+#app.run(host=os.getenv('IP', '0.0.0.0'), port=int(os.getenv('PORT', 8080)))
 
 if __name__== "__main__":
     app.run()
